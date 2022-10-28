@@ -2,6 +2,8 @@
 # TOOLS, PLUGINS
 =====================================================================
 
+// First Checkin
+
 // SLIDERS WITH SWIPER
 // https://www.freakyjolly.com/ionic-slides-using-swiper-js-tutorial-by-examples/
 // https://www.freakyjolly.com/ionic-swiper-slider-with-custom-arrows-tutorial/
