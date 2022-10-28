@@ -1,0 +1,26 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay" class="main_style" (ionWillOpen)="openMenu()" (ionWillClose)="closeMenu()">
+      <ion-header>
+        <div class="profile_box">
+          <img src="{{appData.side_menu.logo}}">
+          <h2>{{appData.side_menu.name}}</h2>
+        </div>
+      </ion-header>
+      <ion-content>
+        <ion-list lines="none">
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
+            <ion-item routerDirection="root" [routerLink]="[p.url]" (click)="beforeRouting(i,p)" lines="none" detail="false" routerLinkActive="selected">
+              <div class="item_inner">
+                <ion-icon class="zmdi zmdi-{{ p.icon }} ion-text-start"></ion-icon>
+                <h2 *ngIf="p.new">{{ p.title }}&nbsp;&nbsp;<img src='../assets/new.png'/></h2>
+                <h2 *ngIf="!p.new">{{ p.title }}</h2>
+              </div>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

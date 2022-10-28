@@ -1,0 +1,163 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title color="{{topic.title.color}}">{{title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+
+    <ion-list lines="none" class="content_list">
+        <div *ngFor="let card of topic.cards; let i = index">
+
+            <div *ngIf="card.heading">
+                <ion-item>
+                    <div class="item_inner">
+                        <h2>
+                            <div *ngIf="card.heading.icon">
+                                <ion-icon color="{{card.heading.icon.color}}" class="{{card.heading.icon.zmdi}}"></ion-icon>
+                            </div>
+                            <div *ngIf="card.heading.text.color == 'primary'">
+                                <span style='color: var(--ion-color-primary)'>{{card.heading.text.label}}</span>
+                            </div>
+                            <div *ngIf="card.heading.text.color == 'danger'">
+                                <span style='color: var(--ion-color-danger)'>{{card.heading.text.label}}</span>
+                            </div>
+                            <div *ngIf="card.heading.text.color == 'warning'">
+                                <span style='color: var(--ion-color-warning)'>{{card.heading.text.label}}</span>
+                            </div>
+                        </h2>
+                    </div>
+                </ion-item>
+            </div>
+    
+            <div *ngFor="let p of card.items; let k = index">
+
+                <!-- type = text -->
+
+                <div *ngIf="p.text">
+                    <div *ngIf="p.text.icon">
+                        <ion-item>
+                            <div class="item_inner">
+
+                                <div *ngIf="p.text.new">
+                                    <p class="{{p.text.align}}">
+                                        <ion-icon color="{{p.text.icon.color}}" class="{{p.text.icon.zmdi}}"></ion-icon>
+                                        <img src='../assets/new.png'/> {{p.text.bullet}} {{p.text.label}}
+                                    </p>
+                                    <div *ngFor="let para of p.text.paras">
+                                        <p>{{para}}</p>
+                                    </div>
+                                </div>
+                                
+                                <div *ngIf="!p.text.new">
+                                    <p class="{{p.text.align}}">
+                                    <!-- <p class="ion-text-center"> -->
+                                    <!-- <p> -->
+                                        <ion-icon color="{{p.text.icon.color}}" class="{{p.text.icon.zmdi}}"></ion-icon>
+                                        {{p.text.bullet}} {{p.text.label}}
+                                    </p>
+                                    <div *ngFor="let para of p.text.paras">
+                                        <p>{{para}}</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </ion-item>
+                    </div>
+
+                    <div *ngIf="!p.text.icon">
+                        <ion-item>
+                            <div class="item_inner">
+
+                                <div *ngIf="p.text.new">
+                                    <p class="{{p.text.align}}"><img src='../assets/new.png'/> {{p.text.bullet}} {{p.text.label}}</p>
+                                    <div *ngFor="let para of p.text.paras">
+                                        <p>{{para}}</p>
+                                    </div>
+                                </div>
+                                
+                                <div *ngIf="!p.text.new">
+                                    <p class="{{p.text.align}}">{{p.text.bullet}} {{p.text.label}}</p>
+                                    <div *ngFor="let para of p.text.paras">
+                                        <p>{{para}}</p>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                        </ion-item>
+                    </div>
+
+                </div>
+
+                <!-- type = image -->
+
+                <div *ngIf="p.image">
+                    <ion-item>
+                        <div class="item_inner">
+                            <pinch-zoom [auto-zoom-out]="false" [limitPan]="true" [minScale]="5" [zoomControlScale]="5">
+                                <img src="{{p.image.src}}">
+                            </pinch-zoom>
+                            <div *ngIf="p.image.detail == 'true'">
+
+                                <p style="padding-bottom: 10px;"></p>
+                                <!-- <p style="text-align: center; font-size: .8rem; font-weight: 600;"><a target="_blank" href="{{p.image.src}}">Xem chi tiết</a></p> -->
+                                <p style="text-align: center; font-size: .8rem; font-weight: 600;">Chuyển chế độ landscape, tap 2 lần để xem chi tiết</p>
+                                <!-- <br><a target="_blank" href="{{p.image.src}}">Xem chi tiết</a> -->
+                            
+                            </div>
+                            <p style="padding-top: 10px;"></p>
+                            <p style="text-align: center; font-size: .8rem; font-weight: 600;">{{p.image.text}}</p>
+                            <p style="padding-bottom: 10px;"></p>
+                            <div *ngIf="p.image.jpg">
+                                <pinch-zoom [auto-zoom-out]="false" [limitPan]="true" [minScale]="5" [zoomControlScale]="5">
+                                    <img src="{{p.image.jpg}}">
+                                </pinch-zoom>
+                                <div *ngIf="p.image.detail == 'true'">
+                                    <p style="padding-bottom: 10px;"></p>
+                                    <!-- <p style="text-align: center; font-size: .8rem; font-weight: 600;"><a target="_blank" href="{{p.image.jpg}}">Xem chi tiết</a></p> -->
+                                    <p style="text-align: center; font-size: .8rem; font-weight: 600;">Chuyển chế độ landscape, tap 2 lần để xem chi tiết</p>
+                                    <!-- <br><a target="_blank" href="{{p.image.src}}">Xem chi tiết</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </ion-item>
+
+                </div>
+
+                <!-- type = scroll_image -->
+
+                <div *ngIf="p.images">
+                    <div *ngIf="p.images.src.length == 5">
+
+                        <ion-item>
+                            <div class="item_inner">
+                                <div class="scroll_container">
+                                    <div class="img_box center_img">
+                                        <img src="{{p.images.src[0]}}">
+                                    </div>
+                                    <div class="img_box center_img">
+                                        <img src="{{p.images.src[1]}}">
+                                    </div>
+                                    <div class="img_box center_img">
+                                        <img src="{{p.images.src[2]}}">
+                                    </div>
+                                    <div class="img_box center_img">
+                                        <img src="{{p.images.src[3]}}">
+                                    </div>
+                                    <div class="img_box center_img">
+                                        <img src="{{p.images.src[4]}}">
+                                    </div>
+                                </div>
+                                <p style="padding-top: 40px;"></p>
+                            </div>
+                        </ion-item>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-list>
+</ion-content>

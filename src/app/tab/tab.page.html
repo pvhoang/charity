@@ -1,0 +1,153 @@
+
+<ion-header >
+	<ion-toolbar>
+			<ion-buttons slot="start">
+					<ion-menu-button></ion-menu-button>
+			</ion-buttons>
+			<ion-title color="{{topic.title.color}}">{{topic.title.text}}</ion-title>
+	</ion-toolbar>
+
+	<div class="tab_button_box">
+		<ion-segment [(ngModel)]="tab" lines="none" mode="md">
+			<ion-segment-button value="doi_tuong" mode="ios">
+				<ion-icon class="zmdi zmdi-accounts"></ion-icon>
+			</ion-segment-button>
+			<ion-segment-button value="thoi_gian" mode="ios">
+				<ion-icon class="zmdi zmdi-calendar"></ion-icon>
+			</ion-segment-button>
+			<ion-segment-button value="qua" mode="ios">
+				<ion-icon class="zmdi zmdi-card-giftcard"></ion-icon>
+			</ion-segment-button>
+			<ion-segment-button value="quy_trinh" mode="ios">
+				<ion-icon class="zmdi zmdi-run"></ion-icon>
+			</ion-segment-button>
+		</ion-segment>
+	</div>
+
+	<div class="card_header">
+			<div *ngFor="let t of topic.tabs; let i = index">
+					<h2 *ngIf="tab == t.header.value">{{t.header.text}}</h2>
+			</div>
+	</div>
+
+</ion-header>
+
+<ion-content fullscreen>
+	<div class="tab_container" [ngSwitch]="tab">
+		<div *ngFor="let t of topic.tabs; let i = index">
+			<ion-list lines="none" class="content_list" *ngSwitchCase="t.header.value">
+				<div *ngFor="let c of t.content; let j = index">
+					<div *ngIf="c.card">
+
+						<div *ngIf="c.card.heading">
+							<ion-item>
+								<div class="item_inner">
+									<h2>
+										<div *ngIf="c.card.heading.icon">
+											<ion-icon color="{{c.card.heading.icon.color}}" class="{{c.card.heading.icon.zmdi}}"></ion-icon>
+										</div>
+										<div *ngIf="c.card.heading.text.color == 'primary'">
+											<span style='color: var(--ion-color-primary)'>{{c.card.heading.text.label}}</span>
+										</div>
+										<div *ngIf="c.card.heading.text.color == 'danger'">
+											<span style='color: var(--ion-color-danger)'>{{c.card.heading.text.label}}</span>
+										</div>
+										<div *ngIf="c.card.heading.text.color == 'warning'">
+											<span style='color: var(--ion-color-warning)'>{{c.card.heading.text.label}}</span>
+										</div>
+									</h2>
+								</div>
+							</ion-item>
+						</div>
+
+						<div *ngFor="let p of c.card.items; let k = index">
+
+							<div *ngIf="p.text">
+								<div *ngIf="p.text.icon">
+									<ion-item>
+										<div class="item_inner">
+
+											<div *ngIf="p.text.new">
+												<p class="{{p.text.align}}">
+													<ion-icon color="{{p.text.icon.color}}" class="{{p.text.icon.zmdi}}"></ion-icon>
+													<img src='../assets/new.png'/> {{p.text.bullet}} {{p.text.label}}
+												</p>
+												<div *ngFor="let para of p.text.paras">
+													<p>{{para}}</p>
+												</div>
+											</div>
+											
+											<div *ngIf="!p.text.new">
+												<p class="{{p.text.align}}">
+													<ion-icon color="{{p.text.icon.color}}" class="{{p.text.icon.zmdi}}"></ion-icon>
+													{{p.text.bullet}} {{p.text.label}}
+												</p>
+												<div *ngFor="let para of p.text.paras">
+													<p>{{para}}</p>
+												</div>
+											</div>
+
+										</div>
+									</ion-item>
+								</div>
+
+								<div *ngIf="!p.text.icon">
+									<ion-item>
+										<div class="item_inner">
+
+											<div *ngIf="p.text.new">
+												<p class="{{p.text.align}}"><img src='../assets/new.png'/> {{p.text.bullet}} {{p.text.label}}</p>
+												<div *ngFor="let para of p.text.paras">
+													<p>{{para}}</p>
+												</div>
+											</div>
+											
+											<div *ngIf="!p.text.new">
+												<p class="{{p.text.align}}">{{p.text.bullet}} {{p.text.label}}</p>
+												<div *ngFor="let para of p.text.paras">
+													<p>{{para}}</p>
+												</div>
+											</div>
+										
+										</div>
+									</ion-item>
+								</div>
+							</div>
+
+							<div *ngIf="p.image">
+								<div *ngIf="p.image.src.length == 5">
+									<ion-item>
+										<div class="item_inner">
+											<div class="scroll_container">
+												<div class="img_box center_img">
+													<img src="{{p.image.src[0]}}">
+												</div>
+												<div class="img_box center_img">
+													<img src="{{p.image.src[1]}}">
+												</div>
+												<div class="img_box center_img">
+													<img src="{{p.image.src[2]}}">
+												</div>
+												<div class="img_box center_img">
+													<img src="{{p.image.src[3]}}">
+												</div>
+												<div class="img_box center_img">
+													<img src="{{p.image.src[4]}}">
+												</div>
+											</div>
+										</div>
+									</ion-item>
+								</div>
+								<!-- <div *ngIf="p.image"> -->
+							</div>
+						<!-- <div *ngFor="let p of c.card.items; let k = index"> -->
+						</div>
+						<!-- <div *ngIf="c.card"></div> -->
+					</div>
+				<!-- <div *ngFor="let c of t.content; let j = index"> -->
+				</div>
+			</ion-list>
+		</div>
+<!-- <div class="tab_container" [ngSwitch]="tab"> -->
+	</div>
+</ion-content>

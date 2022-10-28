@@ -1,0 +1,479 @@
+{
+    "side_menu": {
+        "logo": "../../assets/logo.png",
+        "name": "Từ thiện Nha Trang",
+        "website": "tuthien-nt.web.app"
+    },
+    "topics": [
+        {   "comment": "--- Chương trình --------------------------------------------------------------",
+            "type": "tab",
+            "menu": { "label": "chuong_trinh", "text": "Chương trình", "icon": "file" },
+            "title": { "text": "Chương trình Tặng quà" },
+            "tabs": [
+                {   "type": "text",
+                    "header": { "value": "doi_tuong", "text": "Đối tượng", "color": "primary", "icon": "zmdi-case"},
+                    "content": [
+						{   "card_good": {
+                                "heading": { 
+                                    "text": {"label": "A heading", "color": "danger" },
+                                    "icon": {"zmdi": "balance", "color": "warning" },
+                                    "align": "center"
+                                },
+                                "items": [
+                                    {	"text": {
+                                            "label": "5-10 trường Tiểu học Cấp 1 tại các trường trong tỉnh Khánh Hòa. Ưu tiên các trường miền núi (Khánh Vĩnh, Khánh Sơn, Ninh Thượng, v.v.), và",
+                                            "color": "secondary",
+                                            "icon": { "zmdi": "balance", "color": "success" },
+                                            "align": "start"
+                                        }
+                                    },
+                                    { 	"text": {
+                                            "label": "2-3 trường Tiểu học Cấp 1 tại Quảng Ngãi. Ưu tiên các trường miền núi (Ba Tơ, Sơn Hà, Trà Bồng, v.v).",
+                                            "color": "danger",
+                                            "bullet": "•"
+                                        }
+                                    },
+                                    {   "image": {
+                                            "src": [
+                                            "../../assets/images/DaiLanh/viber_image_2021-12-24_09-23-01-049-app.jpg",
+                                            "../../assets/images/DaiLanh/viber_image_2021-12-24_09-23-02-007-app.jpg",
+                                            "../../assets/images/DaiLanh/viber_image_2021-12-24_09-22-59-922-app.jpg",
+                                            "../../assets/images/DaiLanh/viber_image_2021-12-24_09-23-03-164-app.jpg",
+                                            "../../assets/images/DaiLanh/20210622_055519-app.jpg"
+                                            ]
+                                        }
+                                    }
+                                ]
+							}
+						},
+                        {   "card_good": {
+                                "heading": { 
+                                    "text": {"label": "A heading", "date": "05/13/2022", "color": "danger" },
+                                    "icon": {"zmdi": "balance", "color": "warning" },
+                                    "align": "center"
+                                }
+							}
+						},
+                        {   "card_good": {
+                                "items": [
+								    {	"text": {
+                                            "label": "5-10 trường Tiểu học Cấp 1 tại các trường trong tỉnh Khánh Hòa. Ưu tiên các trường miền núi (Khánh Vĩnh, Khánh Sơn, Ninh Thượng, v.v.), và",
+                                            "color": "secondary",
+                                            "icon": { "zmdi": "accounts", "color": "success" },
+                                            "align": "start",
+                                            "date": "05/13/2022",
+                                            "paras": [
+                                                "• hello world",
+                                                "• goodbye world"
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {   "card": {
+                                "items": [
+                                    {	"text": {
+                                            "label": "5-10 trường Tiểu học Cấp 1 tại các trường trong tỉnh Khánh Hòa. Ưu tiên các trường miền núi (Khánh Vĩnh, Khánh Sơn, Ninh Thượng, v.v.), và",
+                                            "color": "secondary",
+                                            "icon": { "zmdi": "accounts", "color": "success" },
+                                            "align": "start"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {   "card": {
+                                "items": [
+                                    {	"text": {
+                                            "label": "2-3 trường Tiểu học Cấp 1 tại Quảng Ngãi. Ưu tiên các trường miền núi (Ba Tơ, Sơn Hà, Trà Bồng, v.v).",
+                                            "color": "secondary",
+                                            "icon": { "zmdi": "accounts", "color": "success" },
+                                            "align": "start",
+                                            "date": "04/13/2022"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "text",
+                    "header": { "value": "thoi_gian", "text": "Thời gian", "color": "secondary", "icon": "zmdi-case" },
+                    "content": [
+                        {   "card": {
+                                "items": [
+                                    {	"text": {
+                                            "label": "Từ ngày 01/10/2021 đến 30/06/2022",
+                                            "color": "secondary",
+                                            "icon": { "zmdi": "calendar", "color": "success" },
+                                            "align": "start"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "text",
+                    "header": { "value": "qua", "text": "Quà", "color": "tertiary", "icon": "zmdi-assignment-account" },
+                    "content": [
+                        {   "card": {
+                                "items": [
+                                    {	"text": {
+                                            "label": "100 HS / trường, chia đều theo lớp (theo yêu cầu của giáo viên)",
+                                            "color": "secondary",
+                                            "icon": { "zmdi": "accounts", "color": "success" },
+                                            "align": "start"
+                                        }
+                                    },
+                                    {	"text": {
+                                            "label": "Mỗi phần quà (350.000 đ) gồm có:",
+                                            "color": "secondary",
+                                            "icon": { "zmdi": "card-giftcard", "color": "success" },
+                                            "align": "start",
+                                            "paras": [
+                                                "• Gói 1: 1 bộ đồng phục, 10 tập vở, 1 hộp đựng bút, 5 bút chì, 1 hộp sữa tươi, 1 thùng mì gói, hoặc",
+                                                "• Gói 2: 1 bộ đồng phục, 10 kg gạo, 1 thùng mì gói",
+                                                "• Năm phần quà đặc biệt: 1.000.000 đ tiền mặt cho các HS có hoàn cảnh khó khăn (theo yêu cầu của ban giám hiệu)"
+                                            ]
+                                        }
+                                    },
+                                    {	"text": {
+                                            "label": "Tổng cộng: 40.000.000 đ / trường",
+                                            "icon": { "zmdi": "card-giftcard", "color": "success" }
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "text",
+                    "header": { "value": "quy_trinh", "text": "Quy trình tổ chức", "color": "success", "icon": "zmdi-case" },
+                    "content": [
+                        {   "card": {
+                                "items": [
+                                    {	"text": {
+                                            "label": "Hiệu trưởng, ban giám hiệu (qua giới thiệu từ đồng nghiệp, bạn hữu, người thân, v.v) liên lạc với hội tại Khánh Hòa.",
+                                            "icon": { "zmdi": "run", "color": "success" }
+                                        }
+                                    },
+                                    {	"text": {
+                                            "label": "Sau đó BGH chuẩn bị danh sách 100 HS có hoàn cảnh khó khăn được nhận quà và 5 HS được nhận tiền mặt. Danh sách dạng Microsoft Excel gồm các thông tin: tên, giới tính, lớp, chiều cao, cân nặng. Xem mẫu đính kèm. Sau đó gởi về cho nhóm.",
+                                            "icon": { "zmdi": "run", "color": "success" }
+                                        }
+                                    },
+                                    {	"text": {
+                                            "label": "Nhóm sẽ tổ chức chuyến đi tham quan trường để khảo sát và chia sẻ thêm thông tin với ban giám hiệu và các giáo viên. Trong buổi tham quan, nhóm và ban giám hiệu cùng nhau lên kế hoạch phát quà:",
+                                            "icon": { "zmdi": "run", "color": "success" },
+                                            "paras": [
+                                                "• Chọn gói quà (1 hay 2), hoặc yêu cầu thay đổi để phù hợp với HS, v.v.",
+                                                "• Chọn ngày phát quà"
+                                            ]
+                                        }
+                                    },
+                                    {	"text": {
+                                            "label": "Đến ngày phát quà, nhóm sẽ đến trường phát quà tận tay HS (hoặc chuyển cho ban giám hiệu nếu điều kiện tập trung trong mùa dịch không thuận tiện). Dự kiến thời gian từ 9:00 - 11:00 sáng.",
+                                            "icon": { "zmdi": "run", "color": "success" }
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+
+            ]
+        },
+        {   "comment": "--- Thông tin --------------------------------------------------------------",
+            "type": "card",
+            "menu": { "text": "Thông tin", "icon": "info" },
+            "title": { "text": "Thông tin" },
+            "cards": [
+                {
+                    "type": "text",
+                    "heading": { 
+                        "text": {"label": "15/05/2022", "color": "primary" },
+                        "icon": {"zmdi": "time", "color": "primary" },
+                        "align": "center"
+                    },
+                    "items": [
+                        {	"text": {
+                                "label": "Nhóm sẽ tổ chức 1 buổi tham quan trường Tiểu học Sơn Thái, huyện Khánh Vĩnh vào cuối tháng 5. Xin đăng ký với Phượng nếu các bạn thích đi cùng. Chương trình sẽ được cung cấp sớm.",
+                                "color": "secondary",
+                                "icon": { "zmdi": "walk", "color": "success" },
+                                "align": "start",
+                                "date": "05/13/2022"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {   "comment": "--- Liên lạc --------------------------------------------------------------",
+            "type": "card",
+            "menu": { "text": "Liên lạc", "icon": "email" },
+            "title": { "text": "Liên lạc" },
+            "cards": [
+                {
+                    "type": "text",
+                    "heading": { 
+                        "text": {"label": "Thành viên nhóm", "color": "primary" },
+                        "icon": {"zmdi": "accounts", "color": "primary" }
+                    },
+                    "items": [
+                        {	"text": {
+                                "label": "Phượng - 0969 927 952 (Zalo)",
+                                "color": "primary",
+                                "icon": { "zmdi": "female", "color": "secondary" },
+                                "align1": "center"
+                            }
+                        },
+                        {	"text": {
+                            "label": "Ngọc - 0905 276 042 (Zalo)",
+                            "color": "primary",
+                            "icon": { "zmdi": "female", "color": "secondary" }
+                            }
+                        },
+                        {	"text": {
+                            "label": "Hằng - 0988 784 669",
+                            "color": "primary",
+                            "icon": { "zmdi": "female", "color": "secondary" }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "text",
+                    "heading": { 
+                        "text": {"label": "Đóng góp quỹ", "color": "primary" },
+                        "icon": {"zmdi": "accounts", "color": "primary" },
+                        "align": "center"
+                    },
+                    "items": [
+                        {	"text": {
+                                "label": "Tài khoản: PHAN VIET HOANG, 0500 6263 9323, Sacombank (CN Nha Trang)",
+                                "color": "primary",
+                                "icon": { "zmdi": "account", "color": "success" }
+                            }
+                        },
+                        {	"text": {
+                                "label": "Nội dung: QUY TU THIEN TANG QUA HS",
+                                "color": "primary",
+                                "icon": { "zmdi": "info", "color": "success" }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {   "comment": "--- Mạnh thường quân --------------------------------------------------------------",
+            "type": "card",
+            "menu": { "text": "Mạnh thường quân", "icon": "account" },
+            "title": { "text": "Mạnh thường quân" },
+            "cards": [
+                {
+                    "type": "text",
+                    "heading": { 
+                        "text": {"label": "2022", "color": "primary" },
+                        "icon": {"zmdi": "accounts", "color": "primary" },
+                        "align": "center"
+                    },
+                    "items": [
+                        {	"text": {
+                                "label": "Thảo Lê, Nha Trang",
+                                "color": "primary",
+                                "icon": { "zmdi": "account", "color": "success" }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "text",
+                    "heading": { 
+                        "text": {"label": "2021", "color": "primary" },
+                        "icon": {"zmdi": "accounts", "color": "primary" },
+                        "align": "center"
+                    },
+                    "items": [
+                        {	"text": {
+                                "label": "Thảo Lê, Nha Trang",
+                                "color": "primary",
+                                "icon": { "zmdi": "account", "color": "success" }
+                            }
+                        },
+                        {	"text": {
+                                "label": "Hà Văn Sinh, Nha Trang",
+                                "color": "primary",
+                                "icon": { "zmdi": "account", "color": "success" }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "text",
+                    "heading": { 
+                        "text": {"label": "2020", "color": "primary" },
+                        "icon": {"zmdi": "accounts", "color": "primary" },
+                        "align": "center"
+                    },
+                    "items": [
+                        {	"text": {
+                                "label": "Hà Văn Sinh, Nha Trang",
+                                "color": "primary",
+                                "icon": { "zmdi": "account", "color": "success" }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "comment": "--- Danh sách học sinh --------------------------------------------------------------",
+            "type": "card",
+            "menu": { "text": "Danh sách học sinh", "icon": "accounts" },
+            "title": { "text": "Danh sách học sinh" },
+            "cards": [
+                {
+                    "type": "image",
+                    "heading": { 
+                        "text": {"label": "Mẫu Danh sách HS nhận quà", "color": "primary" },
+                        "icon": {"zmdi": "accounts", "color": "primary" },
+                        "align": "center"
+                    },
+                    "items": [
+                        {   "image": {
+                                "src": "../../assets/DS-NhanQua.jpg"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "image",
+                    "heading": { 
+                        "text": {"label": "Mẫu Danh sách HS nhận tiền", "color": "primary" },
+                        "icon": {"zmdi": "accounts", "color": "primary" },
+                        "align": "center"
+                    },
+                    "items": [
+                        {   "image": {
+                                "src": "../../assets/DS-NhanTien.jpg"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {   "comment": "--- Dinh dưỡng --------------------------------------------------------------",
+            "type": "card",
+            "menu": { "text": "Dinh dưỡng", "icon": "cutlery" },
+            "title": { "text": "Dinh dưỡng" },
+            "cards": [
+                {
+                    "type": "image",
+                    "heading": { 
+                        "text": {"label": "Dinh dưỡng", "color": "primary" },
+                        "icon": {"zmdi": "cutlery", "color": "primary" },
+                        "align": "center"
+                    },
+                    "items": [
+                        {   "image": {
+                                "src": "../../assets/analysis.png",
+                                "jpg": "../../assets/analysis.jpg",
+                                "text": "Tình trạng dinh dưỡng 3 trường mới",
+                                "detail": "true"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {   "comment": "--- Phát quà --------------------------------------------------------------",
+            "type": "card",
+            "menu": { "text": "Phát quà", "icon": "accounts" },
+            "title": { "text": "Phát quà" },
+            "cards": [
+                {
+                    "type": "scroll_image",
+                    "heading": { 
+                        "text": {"label": "12/12/2021 - TH Đại Lãnh, huyện Vạn Ninh", "color": "primary" },
+                        "icon": {"zmdi": "accounts", "color": "primary" },
+                        "align": "center"
+                    },
+                    "items": [
+                        {   "images": {
+                                "src": [
+                                    "../../assets/images/DaiLanh/viber_image_2021-12-24_09-23-01-049-app.jpg",
+                                    "../../assets/images/DaiLanh/viber_image_2021-12-24_09-23-02-007-app.jpg",
+                                    "../../assets/images/DaiLanh/viber_image_2021-12-24_09-22-59-922-app.jpg",
+                                    "../../assets/images/DaiLanh/viber_image_2021-12-24_09-23-03-164-app.jpg",
+                                    "../../assets/images/DaiLanh/20210622_055519-app.jpg"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {	"type": "scroll_image",
+                    "heading": {
+                        "text": { "label": "19/03/2022 - TH Cam Hòa 1, huyện Cam Lâm", "color": "primary" },
+                        "icon": {"zmdi": "accounts", "color": "primary" }
+                    },
+                    "items": [
+                        { "images": {
+                              "src": [
+                                    "../../assets/images/CamHoa/20220319_094117-app.jpg",
+                                    "../../assets/images/CamHoa/20220319_093644-app.jpg",
+                                    "../../assets/images/CamHoa/20220319_095551-app.jpg",
+                                    "../../assets/images/CamHoa/20220319_095559-app.jpg",
+                                    "../../assets/images/CamHoa/20220319_095848-app.jpg"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {   "comment": "--- Setting --------------------------------------------------------------",
+            "type": "setting",
+            "menu": { "text": "Thông số", "icon": "info" },
+            "title": { "text": "Thông số" },
+            "cards": [
+                {
+                    "type": "text",
+                    "items": [
+                        {	"select": {
+                                "type": "font_size",
+                                "label": "Cỡ chữ",
+                                "holder": "Chọn cỡ chữ",
+                                "color": "secondary",
+                                "icon": { "zmdi": "font", "color": "primary" },
+                                "options": ["small","medium","large"],
+                                "optionLabels": ["Nhỏ","Vừa","Lớn"]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "text",
+                    "items": [
+                        {	"select": {
+                                "type": "font_name",
+                                "label": "Loại chữ",
+                                "holder": "Chọn loại chữ",
+                                "color": "secondary",
+                                "icon": { "zmdi": "font", "color": "primary" },
+                                "options": ["Verdana","Arial","Times"],
+                                "optionLabels": ["Verdana","Arial","Times"]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+           
+    ]
+}

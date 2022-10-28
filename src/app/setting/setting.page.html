@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title color="{{topic.title.color}}">{{title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+
+    <ion-list lines="none" class="content_list">
+        <div *ngFor="let card of topic.cards; let i = index">
+
+            <div *ngIf="card.heading">
+                <ion-item>
+                    <div class="item_inner">
+                        <h2>
+                            <div *ngIf="card.heading.icon">
+                                <ion-icon color="{{card.heading.icon.color}}" class="{{card.heading.icon.zmdi}}"></ion-icon>
+                            </div>
+                            <div *ngIf="card.heading.text.color == 'primary'">
+                                <span style='color: var(--ion-color-primary)'>{{card.heading.text.label}}</span>
+                            </div>
+                            <div *ngIf="card.heading.text.color == 'danger'">
+                                <span style='color: var(--ion-color-danger)'>{{card.heading.text.label}}</span>
+                            </div>
+                            <div *ngIf="card.heading.text.color == 'warning'">
+                                <span style='color: var(--ion-color-warning)'>{{card.heading.text.label}}</span>
+                            </div>
+                        </h2>
+                    </div>
+                </ion-item>
+            </div>
+    
+            <div *ngFor="let p of card.items; let k = index">
+              <div *ngIf="p.select">
+                <ion-item>
+                  <ion-label>{{p.select.label}}</ion-label>
+                  <ion-select placeholder="{{p.select.holder}}" [(ngModel)]="p.select.value" cancelText="Bỏ" okText="Chọn" (ionChange)="clicked($event)">
+                    <ion-select-option [value]="option" *ngFor="let option of p.select.options; let j = index">
+                      {{ p.select.optionLabels[j] }}
+                    </ion-select-option>
+                  </ion-select>
+                </ion-item>
+              </div>
+            </div>
+
+        </div>
+    </ion-list>
+</ion-content>
