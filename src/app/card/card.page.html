@@ -59,6 +59,7 @@
                                         <ion-icon color="{{p.text.icon.color}}" class="{{p.text.icon.zmdi}}"></ion-icon>
                                         {{p.text.bullet}} {{p.text.label}}
                                     </p>
+                                    <a *ngIf="p.text.link" href="{{p.text.link}}">Link</a>
                                     <div *ngFor="let para of p.text.paras">
                                         <p>{{para}}</p>
                                     </div>
