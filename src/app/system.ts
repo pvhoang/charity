@@ -1,6 +1,6 @@
 
 // --- Version ---
-export var VERSION = "0.5.2";
+export var VERSION = "0.5.3";
 export var VERSION_DATE = "20/11/2021";
 export var DEVELOPMENT_DATE = "01/10/19";
 
